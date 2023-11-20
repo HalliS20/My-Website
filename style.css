@@ -6,12 +6,121 @@
   /* font-family: "Monaspace neon"; */
 }
 
-nav {
-  position: fixed;
+#nav1 {
+  position: absolute;
   border-bottom: 1px solid black;
   flex-basis: 100%;
   width: 100%;
   box-shadow: 0 5px 5px -5px rgba(0, 0, 0, 0.5);
+}
+
+#pro {
+  display: flex;
+  position: absolute;
+  flex-basis: 100%;
+  background-color: white;
+  height: 48px;
+  width: 20.15%;
+  margin-top: 48px;
+  margin-right: 20%;
+  margin-left: 60.05%;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+  background-color: #edebe4;
+}
+
+#pro p {
+  text-align: center;
+  font-weight: bold;
+}
+
+#TodoContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+
+#TodoInput {
+  width: calc(40% - 78px);
+  height: 48px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  display: inline;
+  border-radius: 0px;
+  border: 1px solid black;
+  padding-left: 5px;
+}
+
+#TodoInput:focus {
+  border: 1px solid black;
+  border-radius: 0px;
+  outline: none;
+  padding-left: 5px;
+}
+
+#TodoButton {
+  height: 48px;
+  width: 48px;
+  border-radius: 0px;
+  background-color: black;
+  color: #edebe4;
+  border: 1px solid black;
+  border-left: 0px solid black;
+}
+#TodoButton:hover {
+  background-color: #edebe4;
+  cursor: pointer;
+  color: black;
+}
+#TodoButton:active {
+  cursor: pointer;
+  background-image: linear-gradient(30deg, skyblue, lightcoral);
+  color: white;
+  text-shadow: 0px 0px 10px white;
+}
+
+#TodoButton p {
+  font-size: 15px;
+  font-weight: lighter;
+  margin-right: 0px;
+  display: inline;
+}
+
+#TodoList li {
+  list-style: none;
+  cursor: pointer;
+}
+
+#TodoList li:hover {
+  font-weight: bold;
+  text-shadow: 0px 0px 4px 8px black;
+}
+
+#TodoList {
+  background-color: #edebe4;
+  width: calc(40% - 30px);
+  border: 1px solid black;
+}
+#TodoBar {
+  display: flex;
+  flex-direction: row;
+  flex-basis: 100%;
+  justify-content: left;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 48px;
+  margin-top: 48px;
+}
+
+#listContainer {
+  flex-basis: 100%;
 }
 
 body {
@@ -145,6 +254,7 @@ a:active {
   box-sizing: border-box;
   padding-left: 5px;
   padding-right: 5px;
+  width: 100%;
 }
 
 .splitrow {
@@ -163,7 +273,7 @@ a:active {
 }
 
 .my-paras {
-  padding: 40px 40px 0px 40px;
+  padding: 40px 40px 0px 0px;
 }
 
 .imgdiv {
@@ -179,10 +289,10 @@ a:active {
   border-left: 1px solid black;
   border-right: 1px solid black;
   margin: 0px 1px 0px 1px;
-  padding: 0px 5px 0px 5px;
+  padding: 0px 5px 0px 40px;
   height: 100vh;
 }
 
 article h1 {
-  padding: 40px 40px 0px 40px;
+  padding: 40px 40px 0px 0px;
 }
