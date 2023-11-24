@@ -1,0 +1,108 @@
+#nav1 {
+    position: absolute;
+    border-bottom: 1px solid black;
+    flex-basis: 100%;
+    width: 100%;
+    box-shadow: 0 5px 5px -5px rgba(0, 0, 0, 0.5);
+}
+
+/* Style the navbar */
+.navbar {
+    display: flex;
+    flex-basis: 100%;
+    flex: 1;
+    justify-content: space-around;
+    background-color: #edebe4;
+    /* used to be white */
+    padding: 0px;
+    margin-bottom: 0px;
+}
+/* Style the list items */
+.navbar li {
+    list-style: none;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar li a {
+    color: black;
+    text-decoration: none;
+    width: 100%;
+    display: block;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 14px;
+    padding-bottom: 14px;
+}
+
+.navbar li:hover a {
+    background-image: linear-gradient(30deg, skyblue, lightcoral);
+    color: white;
+    text-shadow: 0px 0px 10px white;
+    font-weight: bolder;
+    background-color: #ddd;
+    box-shadow:
+        -5px 0px 5px 0px rgba(0, 0, 0, 0.5),
+        5px 0px 5px 0px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    width: 20.3%;
+    z-index: 2;
+    border-right: 0px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: 1px solid black;
+    /* height: 80px; */
+    /* border-bottom-left-radius: 5px;
+    /*border-bottom-right-radius: 5px; */
+    /* font-size: 20px; */
+}
+
+.navbar li:not(:last-child) {
+    border-right: 1px solid black;
+}
+
+.navbar #current {
+    background-image: linear-gradient(30deg, lightcoral, skyblue);
+    text-shadow: 0px 0px 10px white;
+    color: white;
+    outline: 1px solid black;
+    position: absolute;
+    width: 20%;
+    z-index: 1;
+    border-right: 0px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* height: 80px; */
+    /* box-shadow: -5px 0px 5px 0px rgba(0, 0, 0, 0.5), 5px 0px 5px 0px rgba(0, 0, 0, 0.5); */
+    /* font-size: 20px; */
+    /* border-bottom-left-radius: 5px;  */
+    /*border-bottom-right-radius: 5px; */
+    /* box-shadow: 0 5px 5px -5px rgba(0, 0, 0, 0.5); */
+}
+
+.navbar #current:hover {
+    box-shadow:
+        -5px 0px 5px 0px rgba(0, 0, 0, 0.5),
+        5px 0px 5px 0px rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: none;
+}
