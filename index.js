@@ -1,5 +1,5 @@
-import { navbar } from "./navbar.js"
-import { loadPage } from "./loadPage.js"
+import { navbar } from "./scripts/navbar.js"
+import { loadPage } from "./scripts/loadPage.js"
 
 document.addEventListener("DOMContentLoaded", function () {
     // Initial load of the navbar
