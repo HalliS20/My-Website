@@ -4,8 +4,8 @@
     "description": "My website has info about me and cool projects",
     "main": "index.js",
     "scripts": {
-        "test": "jest"
-	"start": "server.js"
+        "test": "jest",
+	"start": "live-server public",
     },
     },
     "repository": {
