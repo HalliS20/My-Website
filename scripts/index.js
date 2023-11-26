@@ -1,4 +1,10 @@
-import { TodoList } from "./TodoList.js"
+import { navbar } from "./navbar.js"
+import { loadPage } from "./loadPage.js"
 
-// Create an instance of the TodoList class
-const todoList = new TodoList()
+document.addEventListener("DOMContentLoaded", function () {
+    // Initial load of the navbar
+    navbar()
+
+    window.loadPage = loadPage
+    // Event listeners for each navigation link
+})

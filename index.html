@@ -5,62 +5,11 @@
         <title>My Page V2</title>
         <link rel="stylesheet" href="styles/style.css" />
     </head>
-
     <body class="overlord">
-        <nav id="nav1">
-            <ul class="navbar">
-                <li><a id="current" href="index.html">Home</a></li>
-                <li><a href="views/Info.html">Info</a></li>
-                <li><a href="views/contact.html">Contacts</a></li>
-                <li><a href="views/projects.html">Projects</a></li>
-                <li><a href="views/settings.html">Settings</a></li>
-            </ul>
-        </nav>
+        <div id="navbar-container"></div>
         <div class="break"></div>
-        <article class="textbox">
-            <div class="splitrow sidelines">
-                <div class="half">
-                    <h1>Hello, World!</h1>
-
-                    <p class="my-paras">
-                        Hello my people, this is my website where i will have
-                        some relevant and unrelevant info about myself. I will
-                        also keep links to cool projects that i will develope on
-                        here. This website also acts as an experimental tool for
-                        me to try new things in web design.
-                    </p>
-
-                    <p class="my-paras">
-                        here on the home page you can find cool pictures of me
-                        and perhaps if you are lucky you can find a secret
-                        easter egg here one day who knows.
-                    </p>
-
-                    <p class="my-paras">
-                        on the info page i will have info on me and i may
-                        implement a log in on there to gain access to my cool
-                        info
-                    </p>
-                    <p class="my-paras">
-                        on the contact page you can find ways in which you might
-                        contact me, the actual reality of the matter is that i
-                        am actually near impossible to reach unless you have my
-                        cool phone number which you will only be able to get by
-                        logging in
-                    </p>
-
-                    <p class="my-paras">
-                        on the project page i will keep stuff about the projects
-                        i have worked on, there i will also query you on basis
-                        of my most recent project which is gathering your info
-                        and data which i will then sell for a hefty sum. Nom Nom
-                        Nom i love that data.
-                    </p>
-                </div>
-                <div class="imgdiv">
-                    <img src="pictures/Lights.jpeg" alt="Garfield Car" />
-                </div>
-            </div>
-        </article>
+        <div id="content"></div>
+        <script type="module" src="../scripts/index.js"></script>
+        <script type="module" src="../scripts/loadPage.js" defer></script>
     </body>
 </html>
