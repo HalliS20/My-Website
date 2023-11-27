@@ -1,2 +1,7 @@
 # My-Website
-W.I.P website to represent me and to practice some programming stuff
+This is and always will be a W.I.P 
+since it is a website to represent me and to practice some programming stuff
+which is always evolving
+
+Deployed with vercel
+Hosted on hallis20.me
