@@ -2,8 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Meslo LG M", monospace;
-    /* font-family: "Monaspace neon"; */
+    font-family: "Menlo", "Monaco", "Courier New", "Courier", "monospace";
 }
 
 body {
