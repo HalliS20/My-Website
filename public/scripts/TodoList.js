@@ -16,7 +16,7 @@ export class TodoList {
 
     ///////////////////////////// Add todo item to the list /////////////////////////////
     addToDo() {
-        let inputValue = this.inputField.value
+        const inputValue = this.inputField.value
 
         if (inputValue.length < 1) {
             alert("Please enter a todo, dawg! you know it can't be empty.")
@@ -78,4 +78,3 @@ export class TodoList {
         localStorage.setItem("todos", JSON.stringify(this.todos))
     }
 }
-
