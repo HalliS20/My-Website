@@ -4,4 +4,4 @@ since it is a website to represent me and to practice some programming stuff
 which is always evolving
 
 Deployed with vercel
-Hosted on hallis20.me
+Hosted on [hallis20.me](hallis20.me)
