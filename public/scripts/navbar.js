@@ -29,33 +29,34 @@ function addEventListeners() {
             event.preventDefault() // Prevent the default link behavior
             window.loadPage("../views/projects.html", this)
             console.log("Projects Link clicked")
-            fetch("../views/projects.html")
-                .then((response) => response.text())
-                .then((data) => {
-                    document.getElementById("content").innerHTML = data
-                    const projects = document.getElementById("projects")
-                    const projList = ["todoList"]
-                    for (const proj of projList) {
-                        const projItem = document.createElement("li")
-                        const projLink = document.createElement("a")
-                        projLink.href = "#"
-                        projLink.textContent = proj
-                        projLink.addEventListener("click", () => {
-                            fetch(`../views/${proj}.html`).then((response) => {
-                                response.text().then((data) => {
-                                    document.getElementById(
-                                        "content"
-                                    ).innerHTML = data
-                                    if (proj === "todoList") {
-                                        const todoList = new window.TodoList()
-                                    }
-                                })
-                            })   
-                        })
-                        projItem.appendChild(projLink)
-                        projects.appendChild(projItem)
-                    }
-                })
+            window.projecter()
+            // fetch("../views/projects.html")
+            //     .then((response) => response.text())
+            //     .then((data) => {
+            //         document.getElementById("content").innerHTML = data
+            //         const projects = document.getElementById("projects")
+            //         const projList = ["todoList"]
+            //         for (const proj of projList) {
+            //             const projItem = document.createElement("li")
+            //             const projLink = document.createElement("a")
+            //             projLink.href = "#"
+            //             projLink.textContent = proj
+            //             projLink.addEventListener("click", () => {
+            //                 fetch(`../views/${proj}.html`).then((response) => {
+            //                     response.text().then((data) => {
+            //                         document.getElementById(
+            //                             "content"
+            //                         ).innerHTML = data
+            //                         if (proj === "todoList") {
+            //                             const todoList = new window.TodoList()
+            //                         }
+            //                     })
+            //                 })
+            //             })
+            //             projItem.appendChild(projLink)
+            //             projects.appendChild(projItem)
+            //         }
+            //     })
         })
     document
         .getElementById("contactsLink")
