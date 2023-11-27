@@ -78,3 +78,5 @@ export class TodoList {
         localStorage.setItem("todos", JSON.stringify(this.todos))
     }
 }
+
+const todoList = new TodoList() // Create a new instance of the TodoList class

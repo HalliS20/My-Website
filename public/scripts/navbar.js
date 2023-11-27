@@ -43,5 +43,11 @@ function addEventListeners() {
             window.loadPage("../views/settings.html", this)
         })
     const firstNavLink = document.querySelector(".navbar li:first-child a")
-    loadPage("../views/home.html", firstNavLink)
+    window.loadPage("../views/home.html", firstNavLink)
+}
+/////////// to load the todo page ///////////
+function dolog() {
+    document.getElementById("todoLink").addEventListener("click", function () {
+        console.log("hello")
+    })
 }
