@@ -79,4 +79,3 @@ export class TodoList {
     }
 }
 
-const todoList = new TodoList() // Create a new instance of the TodoList class
