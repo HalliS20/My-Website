@@ -28,7 +28,7 @@ function addEventListeners() {
         .addEventListener("click", function (event) {
             event.preventDefault() // Prevent the default link behavior
             window.loadPage("../views/projects.html", this)
-            console.log("Projects Link clicked")
+            console.log("Projects Link clicked :)")
             window.projecter()
         })
     document
