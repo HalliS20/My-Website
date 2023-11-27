@@ -5,9 +5,9 @@ import { projecter } from "./scripts/projecter.js"
 
 document.addEventListener("DOMContentLoaded", function () {
     // Initial load of the navbar
-    navbar()
+    window.projecter = projecter
     window.loadPage = loadPage
     window.TodoList = TodoList
-    window.projecter = projecter
+    navbar()
     // Event listeners for each navigation link
 })
