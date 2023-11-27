@@ -8,8 +8,7 @@
         "lint": "eslint .",
         "lint:fix": "eslint . --fix",
         "start": "node index.js",
-        "deploy": "gh-pages -d dist",
-        "build": "gulp build"
+        "deploy": "gh-pages -d dist"
     },
     "repository": {
         "type": "git",
