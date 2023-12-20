@@ -9,7 +9,6 @@ body {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-
     align-items: flex-start;
     align-content: flex-start;
     justify-content: flex-start;
@@ -27,10 +26,9 @@ body {
     width: 100%;
     opacity: 1;
     animation: slide-in 0.5s forwards;
-}
-
-#content.fade-out {
-    animation: slide-out 0.5s forwards;
+    &.fade-out {
+        animation: slide-out 0.5s forwards;
+    }
 }
 
 @keyframes slide-in {

@@ -11,6 +11,9 @@
   padding-right: 5px;
   width: 100%;
 }
+.textbox h1 {
+  padding: 40px 40px 0px 0px;
+}
 
 .splitrow {
   width: 100%;
@@ -18,7 +21,6 @@
   flex-direction: row;
   justify-content: center;
 }
-
 .splitrow img {
   flex: 1;
   max-width: 100%;
@@ -49,10 +51,6 @@
   margin: 0px 1px 5px 1px;
   padding: 0px 5px 5px 40px;
   height: 120vh;
-}
-
-.textbox h1 {
-  padding: 40px 40px 0px 0px;
 }
 
 /*# sourceMappingURL=index.css.map */

@@ -46,7 +46,8 @@ $activeGradient: linear-gradient(30deg, lightcoral, skyblue);
             display: flex;
             align-items: center;
             justify-content: center;
-            &::hover {
+
+            &:hover {
                 color: white;
             }
         }

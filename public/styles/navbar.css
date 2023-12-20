@@ -43,7 +43,7 @@
   align-items: center;
   justify-content: center;
 }
-.navbar a.active::hover {
+.navbar a.active:hover {
   color: white;
 }
 .navbar a:link {

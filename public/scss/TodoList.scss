@@ -1,3 +1,5 @@
+$offWhite: #edebe4;
+$hoverGradient: linear-gradient(30deg, skyblue, lightcoral);
 /* container for todo List + button and input */
 #TodoContainer {
     display: flex;
@@ -30,13 +32,13 @@
     border-radius: 0px;
     border: 1px solid black;
     padding-left: 10px;
-}
 
-#TodoInput:focus {
-    border: 1px solid black;
-    border-radius: 0px;
-    outline: none;
-    padding-left: 10px;
+    &:focus {
+        border: 1px solid black;
+        border-radius: 0px;
+        outline: none;
+        padding-left: 10px;
+    }
 }
 
 /* Todo Button styling */
@@ -45,57 +47,60 @@
     width: 48px;
     border-radius: 0px;
     background-color: black;
-    color: #edebe4;
+    color: $offWhite;
     border: 1px solid black;
     border-left: 0px solid black;
-}
-#TodoButton:hover {
-    background-color: #edebe4;
-    cursor: pointer;
-    color: black;
-}
-#TodoButton:active {
-    cursor: pointer;
-    background-image: linear-gradient(30deg, skyblue, lightcoral);
-    color: white;
-    text-shadow: 0px 0px 10px white;
-}
 
-#TodoButton p {
-    font-size: 15px;
-    font-weight: lighter;
-    margin-right: 0px;
-    display: inline;
+    &:hover {
+        background-color: $offWhite;
+        cursor: pointer;
+        color: black;
+    }
+
+    &:active {
+        background-image: $hoverGradient;
+        color: white;
+        text-shadow: 0px 0px 10px white;
+    }
+
+    p {
+        font-size: 15px;
+        font-weight: lighter;
+        margin-right: 0px;
+        display: inline;
+    }
 }
 
 /* container for todo list */
 #listContainer {
     flex-basis: 100%;
 }
-/* For TodoLis look */
-#TodoList li {
-    list-style: none;
-    cursor: pointer;
-    margin-left: 10px;
-    margin-top: 10px;
-}
-
-#TodoList li:last-child {
-    margin-bottom: 10px;
-}
-#TodoList li:hover {
-    font-weight: bold;
-    text-shadow: 0px 0px 4px 8px black;
-}
 
 #TodoList {
-    background-color: #edebe4;
+    background-color: $offWhite;
     width: calc(40% - 30px);
     border: 1px solid black;
-}
 
-#TodoList:empty {
-    border: 0px solid black;
+    li {
+        list-style: none;
+        cursor: pointer;
+        margin-left: 10px;
+        margin-top: 10px;
+
+        &:last-child {
+            margin-bottom: 10px;
+        }
+
+        &:hover {
+            text-shadow: 0px 0px 4px 8px black;
+            font-weight: bold;
+        }
+
+        &:empty {
+            display: none;
+            border: 0px solid black;
+        }
+    }
 }
 
 /* navbar display for Todo List */
@@ -103,7 +108,6 @@
     display: flex;
     position: absolute;
     flex-basis: 100%;
-    background-color: white;
     height: 48px;
     width: 20.2%;
     margin-top: 48px;
@@ -115,10 +119,10 @@
     border-left: 1px solid black;
     border-right: 1px solid black;
     border-bottom: 1px solid black;
-    background-color: #edebe4;
-}
+    background-color: $offWhite;
 
-#pro p {
-    text-align: center;
-    font-weight: bold;
+    p {
+        text-align: center;
+        font-weight: bold;
+    }
 }

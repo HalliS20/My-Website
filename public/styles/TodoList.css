@@ -31,7 +31,6 @@
   border: 1px solid black;
   padding-left: 10px;
 }
-
 #TodoInput:focus {
   border: 1px solid black;
   border-radius: 0px;
@@ -49,20 +48,16 @@
   border: 1px solid black;
   border-left: 0px solid black;
 }
-
 #TodoButton:hover {
   background-color: #edebe4;
   cursor: pointer;
   color: black;
 }
-
 #TodoButton:active {
-  cursor: pointer;
   background-image: linear-gradient(30deg, skyblue, lightcoral);
   color: white;
   text-shadow: 0px 0px 10px white;
 }
-
 #TodoButton p {
   font-size: 15px;
   font-weight: lighter;
@@ -75,30 +70,26 @@
   flex-basis: 100%;
 }
 
-/* For TodoLis look */
+#TodoList {
+  background-color: #edebe4;
+  width: calc(40% - 30px);
+  border: 1px solid black;
+}
 #TodoList li {
   list-style: none;
   cursor: pointer;
   margin-left: 10px;
   margin-top: 10px;
 }
-
 #TodoList li:last-child {
   margin-bottom: 10px;
 }
-
 #TodoList li:hover {
-  font-weight: bold;
   text-shadow: 0px 0px 4px 8px black;
+  font-weight: bold;
 }
-
-#TodoList {
-  background-color: #edebe4;
-  width: calc(40% - 30px);
-  border: 1px solid black;
-}
-
-#TodoList:empty {
+#TodoList li:empty {
+  display: none;
   border: 0px solid black;
 }
 
@@ -107,7 +98,6 @@
   display: flex;
   position: absolute;
   flex-basis: 100%;
-  background-color: white;
   height: 48px;
   width: 20.2%;
   margin-top: 48px;
@@ -121,7 +111,6 @@
   border-bottom: 1px solid black;
   background-color: #edebe4;
 }
-
 #pro p {
   text-align: center;
   font-weight: bold;

@@ -10,6 +10,10 @@
     padding-left: 5px;
     padding-right: 5px;
     width: 100%;
+
+    h1 {
+        padding: 40px 40px 0px 0px;
+    }
 }
 
 .splitrow {
@@ -17,15 +21,15 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-}
 
-.splitrow img {
-    flex: 1;
-    max-width: 100%;
-    border-left: 2px solid black;
-    border-right: 2px solid black;
-    border-bottom: 2px solid black;
-    max-height: 100vh;
+    img {
+        flex: 1;
+        max-width: 100%;
+        border-left: 2px solid black;
+        border-right: 2px solid black;
+        border-bottom: 2px solid black;
+        max-height: 100vh;
+    }
 }
 
 .my-paras {
@@ -49,8 +53,4 @@
     margin: 0px 1px 5px 1px;
     padding: 0px 5px 5px 40px;
     height: 120vh;
-}
-
-.textbox h1 {
-    padding: 40px 40px 0px 0px;
 }
