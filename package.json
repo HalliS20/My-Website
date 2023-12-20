@@ -37,6 +37,7 @@
         "@html-eslint/eslint-plugin": "^0.21.0",
         "@html-eslint/parser": "^0.21.0",
         "eslint": "^8.54.0",
+        "eslint-plugin-html": "^7.1.0",
         "eslint-plugin-json": "^3.1.0",
         "eslint-plugin-react": "^7.33.2"
     }
