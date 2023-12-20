@@ -28,7 +28,7 @@ export function loadPage(page, element) {
                     resolve()
                 })
                 .catch((error) => console.error("Error:", error))
-        }, 300)
+        }, 400)
 
         //======== Set active button for NAVBAR ========//
         if (element && element.classList) {
