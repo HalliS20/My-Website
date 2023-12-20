@@ -10,7 +10,6 @@
 /* Style the navbar */
 .navbar {
   display: flex;
-  flex-basis: 100%;
   flex: 1;
   justify-content: space-around;
   background-color: #edebe4;
