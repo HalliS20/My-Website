@@ -13,7 +13,7 @@ body {
     align-content: top;
     justify-content: center;
     min-height: 100vh;
-    background-color: black;
+    background-color: #edebe5;
     scroll-behavior: smooth;
 }
 
@@ -23,6 +23,29 @@ body {
 }
 
 #content {
-    height: 2000px;
     width: 100%;
+    opacity: 1;
+    animation: slide-in 0.3s forwards;
+}
+
+#content.fade-out {
+    animation: slide-out 0.3s forwards;
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slide-out {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
 }
