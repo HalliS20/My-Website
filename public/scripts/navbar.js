@@ -27,9 +27,10 @@ function addEventListeners() {
         .getElementById("projectsLink")
         .addEventListener("click", function (event) {
             event.preventDefault() // Prevent the default link behavior
-            window.loadPage("../views/projects.html", this)
-            console.log("Projects Link clicked :)")
-            window.projecter()
+            window.loadPage("../views/projects.html", this).then(() => {
+                console.log("Projects Link clicked :)")
+                window.projecter()
+            })
         })
     document
         .getElementById("contactsLink")
