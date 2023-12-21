@@ -21,6 +21,9 @@ export function projecter() {
                             if (proj === "todoList") {
                                 new window.TodoList() //===== Make new TodoList JS object =====//
                             }
+                            if (proj === "music") {
+                                new window.loadMusicFiles() //===== Make new Music JS object =====//
+                            }
                         })
                     })
                 })
