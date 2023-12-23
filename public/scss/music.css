@@ -1,0 +1,30 @@
+#musicList {
+  align-self: center;
+  justify-self: center;
+  flex: 1;
+  display: flex;
+}
+#musicList li {
+  padding: 10px;
+  margin: 20px;
+  list-style: none;
+  background-color: #edebe4;
+  border: 1px solid black;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+#musicContainer {
+  margin-top: 40px;
+  margin-right: 40px;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+/*# sourceMappingURL=music.css.map */

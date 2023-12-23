@@ -3,7 +3,7 @@ function addStarsMusic() {
         .then((response) => response.json())
         .then((data) => {
             let musiclist = document.getElementById("musicList")
-            let musicJson = data
+            const musicJson = data
             const music = musicJson.music
             music.map((song) => {
                 let songListItem = document.createElement("li")
@@ -12,6 +12,7 @@ function addStarsMusic() {
                 songItem.id = song.name
                 songItem.controls = true
                 const songName = document.createElement("p")
+                songName.classList.add("title")
                 songName.textContent = song.name
                 songListItem.classList.add("song")
                 songListItem.appendChild(songName)
@@ -24,4 +25,5 @@ function addStarsMusic() {
         })
 }
 
+// maybe use plyr for the audio player
 export {addStarsMusic}

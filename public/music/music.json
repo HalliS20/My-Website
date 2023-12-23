@@ -4,6 +4,59 @@
             "name": "Stars",
             "link": "audio/Stars.wav",
             "posterLink": ""
+        },{
+            "name":"Alltaf Solo",
+            "link":"audio/Alltaf-SOLO.wav",
+            "posterLink": ""
+        },
+        {
+            "name": "Beutifull World",
+            "link": "audio/Beuty.wav",
+            "posterLink": ""
+        },
+        {
+            "name":"Flowers",
+            "link":"audio/Flowers.wav",
+            "posterLink": ""
+        },
+        {
+            "name": "Sunlight",
+            "link": "audio/Sunlight.wav",
+            "posterLink": ""
+        },
+        {
+            "name": "Midnight",
+            "link": "audio/Midnight.wav",
+            "posterLink": ""
+        },
+        {
+            "name": "voices",
+            "link": "audio/voices.wav",
+            "posterLink": ""
+        },
+        {
+            "name": "Plastic",
+            "link": "audio/Plastic.wav",
+            "posterLink": ""
+
+        },
+        {
+            "name": "ModernArt",
+            "link": "audio/ModernArt.wav",
+            "posterLink": ""
+        },
+        {
+            "name": "DagurGnacci",
+            "link": "audio/DagurGnacci.wav",
+            "posterLink": ""
+        },
+        {
+            "name": "Erik",
+            "link": "audio/Erik.Wav",
+            "posterLink": ""
         }
+
     ]
 }
+
+
