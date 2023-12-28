@@ -118,12 +118,7 @@ $activeGradient: linear-gradient(30deg, lightcoral, skyblue);
             padding-bottom: 14px;
             border-right: 0.5px solid black;
             border-left: 0.5px solid black;
-            transition:
-                text-shadow 0.3s ease,
-                color 0.3s ease,
-                box-shadow 0.3s ease,
-                width 0.3s ease,
-                border 0.3s ease;
+
             transition: all 0.3s ease;
 
             &::before {
