@@ -2,12 +2,12 @@ function addStarsMusic() {
     fetch("../music/music.json")
         .then((response) => response.json())
         .then((data) => {
-            let musiclist = document.getElementById("musicList")
+            const musiclist = document.getElementById("musicList")
             const musicJson = data
             const music = musicJson.music
             music.map((song) => {
-                let songListItem = document.createElement("li")
-                let songItem = document.createElement("audio")
+                const songListItem = document.createElement("li")
+                const songItem = document.createElement("audio")
                 songItem.src = "../music/" + song.link
                 songItem.id = song.name
                 songItem.controls = true
