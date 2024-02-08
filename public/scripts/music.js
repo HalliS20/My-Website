@@ -23,7 +23,8 @@ function pauseAudio(audio, playPauseButton) {
 }
 
 async function fetchAudio() {
-    const response = await fetch("/audio")
+    console.log
+    const response = await fetch("/api/audio")
     const data = await response.json()
     return data
 }
