@@ -9,7 +9,7 @@
         "lint": "eslint .",
         "scss": "sass --watch public/scss:public/styles",
         "lint:fix": "eslint . --fix",
-        "start": "node public/api/index.js",
+        "start": "node ./index.js",
         "lint:css": "stylelint '**/*.scss'"
     },
     "repository": {
