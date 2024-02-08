@@ -23,7 +23,7 @@ function pauseAudio(audio, playPauseButton) {
 }
 
 async function fetchAudio() {
-  const response = await fetch("http://localhost:3000/audio");
+  const response = await fetch("/audio");
   const data = await response.json();
   return data;
 }
