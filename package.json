@@ -37,7 +37,9 @@
         "express": "^4.18.2",
         "firebase": "^10.8.0",
         "index.js": "^0.0.3",
-        "node": "^21.2.0"
+        "node": "^21.2.0",
+        "protobufjs": "^7.2.6",
+        "punycode": "^2.3.1"
     },
     "devDependencies": {
         "@babel/preset-env": "^7.23.9",

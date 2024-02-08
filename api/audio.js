@@ -14,13 +14,6 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig)
 
 export default async function audioLister(req, res) {
-    // res.setHeader("Access-Control-Allow-Origin", "*")
-    // res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS")
-    // res.setHeader(
-    //     "Access-Control-Allow-Headers",
-    //     "X-Requested-With, Content-Type, Accept",
-    // )
-
     const storage = firebase.storage()
     const storageRef = storage.ref()
     const audioList = []

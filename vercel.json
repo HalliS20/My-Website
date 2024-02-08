@@ -2,7 +2,7 @@
     "routes": [
         {
             "src": "/api/audio",
-            "dest": "/api/audio.cjs"
+            "dest": "/api/audio.js"
         }
     ]
 }
