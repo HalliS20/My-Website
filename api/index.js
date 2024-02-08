@@ -4,7 +4,7 @@ import firebase from "firebase/compat/app"
 import "firebase/compat/storage"
 
 const app = express()
-app.use(express.static("public"))
+// app.use(express.static("public"))
 app.use(cors())
 app.use(express.json())
 
