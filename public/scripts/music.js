@@ -154,15 +154,30 @@ function createPlayerElement(audio, name) {
   player.classList.add("player");
   return player;
 }
+
+function createObserver() {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("centered");
+        } else {
+          entry.target.classList.remove("centered");
+        }
+      });
+    },
+    { root: null, rootMargin: "0px", threshold: 1 }
+  );
+  return observer;
+}
+
 export async function music() {
   console.log("music");
 
   document.getElementById("music").innerHTML = `
   <div>
         <div id="audioPlayer">
-            <div id="leftTransparent"></div>   
             <div id="audios"></div>
-            <div id="rightTransparent"></div>
         </div>
   </div>
 `;
@@ -185,19 +200,7 @@ export async function music() {
     audios.appendChild(player);
 
     // ========= Intersection Observer for fading out the player ================
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("centered");
-          } else {
-            entry.target.classList.remove("centered");
-          }
-        });
-      },
-      { root: null, rootMargin: "0px", threshold: 1 }
-    );
-
+    const observer = createObserver();
     observer.observe(player);
   }
 }

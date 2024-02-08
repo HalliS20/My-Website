@@ -232,7 +232,8 @@ body {
 #TodoContainer {
   display: flex;
   flex-direction: column;
-  align-items: left;
+  justify-content: flex-start;
+  width: 50%;
 }
 
 /* container for todo input  + Button*/
@@ -241,19 +242,17 @@ body {
   flex-direction: row;
   flex-basis: 100%;
   justify-content: left;
-  align-items: center;
+  align-items: flex-start;
   align-content: center;
   flex-wrap: wrap;
   width: 100%;
   height: 48px;
-  margin-top: 48px;
 }
 
 /* Todo Input styling */
 #TodoInput {
-  width: calc(40% - 78px);
+  width: calc(100% - 48px);
   height: 48px;
-  margin-top: 20px;
   margin-bottom: 20px;
   font-weight: bold;
   display: inline;
@@ -302,7 +301,6 @@ body {
 
 #TodoList {
   background-color: #edebe4;
-  width: calc(40% - 30px);
   border: 1px solid black;
 }
 #TodoList li {
@@ -347,8 +345,7 @@ body {
 }
 
 #music {
-  max-width: 1280px;
-  margin: 0 auto;
+  width: 50%;
   text-align: center;
 }
 
@@ -372,14 +369,14 @@ body {
   height: 300px;
   padding-right: 100px;
   max-width: 400px;
-  background-color: #f4f4f4;
+  background-color: #edebe4;
   border: 1px solid black;
-  box-shadow: black 5px 5px 10px;
+  box-shadow: black 2px 2px 6px;
 }
 
 .player {
   padding: 10px;
-  background-color: whitesmoke;
+  background-color: #edebe4;
   flex: 0 0 auto;
   scroll-snap-align: center;
   scroll-snap-stop: always;
@@ -400,13 +397,18 @@ body {
 }
 
 .playPauseButton {
-  border: none;
-  color: white;
+  border: 1px solid black;
+  color: black;
+  background-color: #edebe4;
   padding: 10px;
   text-align: center;
   text-decoration: none;
   font-size: 16px;
   width: 50%;
+}
+.playPauseButton:hover, .playPauseButton:active, .playPauseButton:focus {
+  background-color: #1a1a1a;
+  color: #edebe4;
 }
 
 .playBar {
@@ -429,6 +431,10 @@ body {
   font-size: 30px;
   font-style: normal;
   cursor: pointer;
+  transition: color 0.25s;
+}
+.volumeIcon:hover {
+  color: #646cff;
 }
 
 .volumeSlider {
@@ -473,13 +479,11 @@ body {
   overflow: hidden;
   background-clip: content-box;
 }
-
 .seekSlider[type=range]::-webkit-slider-runnable-track {
   height: 3px;
   background: black;
   overflow: hidden;
 }
-
 .seekSlider[type=range]::-webkit-slider-thumb {
   /* removing default appearance */
   -webkit-appearance: none;
@@ -494,7 +498,6 @@ body {
 
 /*=========== PRESET STYLES===============*/
 button {
-  border-radius: 8px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
   font-size: 1em;
@@ -502,15 +505,13 @@ button {
   font-family: inherit;
   background-color: #1a1a1a;
   cursor: pointer;
-  transition: border-color 0.25s;
+  transition: border-color 0.25s, background-color 0.25s, color 0.25s, color 0.25s;
 }
-
 button:hover {
   border: 2px solid #646cff;
 }
-
 button:focus,
-button:active {
+button active {
   border: 2px solid #646cff;
 }
 
@@ -532,6 +533,14 @@ button:active {
   .player {
     background-color: lightcoral;
   }
+}
+#projects-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 40px;
+  padding-right: 40px;
 }
 
 /*# sourceMappingURL=style.css.map */
