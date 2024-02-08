@@ -13,13 +13,13 @@ const firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig)
 
-module.exports = async (req, res) => {
-    res.setHeader("Access-Control-Allow-Origin", "*")
-    res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS")
-    res.setHeader(
-        "Access-Control-Allow-Headers",
-        "X-Requested-With, Content-Type, Accept",
-    )
+export default async function audioLister(req, res) {
+    // res.setHeader("Access-Control-Allow-Origin", "*")
+    // res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS")
+    // res.setHeader(
+    //     "Access-Control-Allow-Headers",
+    //     "X-Requested-With, Content-Type, Accept",
+    // )
 
     const storage = firebase.storage()
     const storageRef = storage.ref()
@@ -34,7 +34,7 @@ module.exports = async (req, res) => {
             })
 
             await Promise.all(promises)
-
+            console.log("Audio list:", audioList)
             res.status(200).send(audioList)
         })
         .catch((error) => {
