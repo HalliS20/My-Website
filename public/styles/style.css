@@ -520,19 +520,6 @@ button active {
     color: #213547;
     background-color: #ffffff;
   }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #ff9c93;
-  }
-  .playPauseButton {
-    align-self: center;
-    color: black;
-  }
-  .player {
-    background-color: lightcoral;
-  }
 }
 #projects-container {
   display: flex;
