@@ -34,16 +34,15 @@
         "url": "https://github.com/HalliS20/My-Website/issues"
     },
     "dependencies": {
+        "@firebase/app": "^0.9.27",
+        "@firebase/storage": "^0.12.1",
         "cors": "^2.8.5",
         "dotenv": "^16.3.1",
         "express": "^4.18.2",
-        "firebase": "^10.8.0",
         "glib": "^1.3.0",
         "index.js": "^0.0.3",
-        "libc": "^1.0.0-b0",
         "libm": "^2.0.0-b1",
         "node": "^21.2.0",
-        "protobufjs": "^7.2.6",
         "punycode": "^2.3.1"
     },
     "devDependencies": {
@@ -53,6 +52,7 @@
         "eslint-plugin-json": "^3.1.0",
         "eslint-plugin-react": "^7.33.2",
         "html-loader": "^5.0.0",
+        "libc": "^1.0.0-b0",
         "sass": "^1.69.5",
         "stylelint": "^16.0.2",
         "stylelint-scss": "^6.0.0"

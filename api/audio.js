@@ -1,5 +1,5 @@
-import firebase from "firebase/compat/app"
-import "firebase/compat/storage"
+import {initializeApp} from "@firebase/app"
+import {getStorage, ref, listAll, getDownloadURL} from "@firebase/storage"
 
 const firebaseConfig = {
     apiKey: "AIzaSyBXUQo9B5V3oZ2j9nxc7lTex0ezU3BqSvc",
@@ -11,18 +11,17 @@ const firebaseConfig = {
     measurementId: "G-Z1R0MTX35Z",
 }
 
-firebase.initializeApp(firebaseConfig)
+const app = initializeApp(firebaseConfig)
+const storage = getStorage(app)
 
 export default async function audioLister(req, res) {
-    const storage = firebase.storage()
-    const storageRef = storage.ref()
+    const storageRef = ref(storage)
     const audioList = []
 
-    storageRef
-        .listAll()
+    listAll(storageRef)
         .then(async (result) => {
             const promises = result.items.map(async (itemRef) => {
-                const url = await itemRef.getDownloadURL()
+                const url = await getDownloadURL(itemRef)
                 audioList.push({name: itemRef.name, url: url})
             })
 
