@@ -3,7 +3,6 @@
     "version": "1.0.0",
     "description": "My website wil have cool projects and mooooore",
     "main": "index.js",
-    "type": "module",
     "scripts": {
         "test": "jest",
         "lint": "eslint .",
@@ -36,16 +35,17 @@
         "dotenv": "^16.3.1",
         "express": "^4.18.2",
         "firebase": "^10.8.0",
+        "glib": "^1.3.0",
         "index.js": "^0.0.3",
+        "libc": "^1.0.0-b0",
+        "libm": "^2.0.0-b1",
         "node": "^21.2.0",
         "protobufjs": "^7.2.6",
         "punycode": "^2.3.1"
     },
     "devDependencies": {
-        "@babel/preset-env": "^7.23.9",
         "@html-eslint/eslint-plugin": "^0.21.0",
         "@html-eslint/parser": "^0.21.0",
-        "babel-loader": "^9.1.3",
         "cssnano": "^6.0.3",
         "eslint-plugin-html": "^7.1.0",
         "eslint-plugin-json": "^3.1.0",
@@ -55,7 +55,6 @@
         "postcss": "^8.4.35",
         "sass": "^1.69.5",
         "stylelint": "^16.0.2",
-        "stylelint-scss": "^6.0.0",
-        "webpack-cli": "^5.1.4"
+        "stylelint-scss": "^6.0.0"
     }
 }
