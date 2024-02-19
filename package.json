@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "description": "My website wil have cool projects and mooooore",
     "main": "index.js",
+    "type": "module",
     "engines": {
         "node": "18.x"
     },
@@ -34,8 +35,6 @@
         "url": "https://github.com/HalliS20/My-Website/issues"
     },
     "dependencies": {
-        "@firebase/app": "^0.9.27",
-        "@firebase/storage": "^0.12.1",
         "cors": "^2.8.5",
         "dotenv": "^16.3.1",
         "express": "^4.18.2",

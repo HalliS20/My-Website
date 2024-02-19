@@ -1,4 +1,7 @@
+// import {readdir} from "fs"
+
 // ========= play audio function ================
+
 function playAudio(audio, playPauseButton) {
     audio.play()
     playPauseButton.innerText = "Pause"
@@ -23,10 +26,24 @@ function pauseAudio(audio, playPauseButton) {
 }
 
 async function fetchAudio() {
-    console.log
-    const response = await fetch("/api/audio")
-    const data = await response.json()
-    return data
+    const songNames = [
+        "Alltaf_SOlO",
+        "Beuty",
+        "Erik",
+        "Flowers",
+        "Midnight",
+        "Plastic",
+        "Stars",
+        "voices",
+    ]
+    const suffix = ".mp3"
+    const prefix = "../music/"
+    let fullPaths = []
+    for (let i in songNames) {
+        const path = prefix + songNames[i] + suffix
+        fullPaths.push(path)
+    }
+    return fullPaths
 }
 
 function createPlayBarElement(audio) {
@@ -190,9 +207,10 @@ export async function music() {
         const data = dataArray[index]
 
         //=============== Audio Element and title =================
-        const audio = new Audio(data.url) // audio element is fetched from firebase url
+        const audio = new Audio(data) // audio element is fetched from firebase url
         const name = document.createElement("h2") // audio title is fetched from firebase storage
-        name.innerText = data.name.split(".").slice(0, -1).join(".") // remove the file extension from the title
+        name.innerText = data.split(".")[2].split("/")[2]
+        // remove the file extension from the title
 
         // ========= adding items to the html code ================
 
