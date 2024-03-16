@@ -12,8 +12,7 @@ body {
   align-items: flex-start;
   align-content: flex-start;
   justify-content: flex-start;
-  min-height: 200vh;
-  background-color: #edebe5;
+  background-color: #edebe4;
   scroll-behavior: smooth;
 }
 
@@ -34,21 +33,45 @@ body {
 @keyframes slide-in {
   from {
     transform: translateX(100%);
-    opacity: 0; /* Add this line */
+    opacity: 0;
+    /* Add this line */
   }
   to {
     transform: translateX(0);
-    opacity: 1; /* Add this line */
+    opacity: 1;
+    /* Add this line */
   }
 }
 @keyframes slide-out {
   from {
     transform: translateX(0);
-    opacity: 1; /* Add this line */
+    opacity: 1;
+    /* Add this line */
   }
   to {
     transform: translateX(-100%);
-    opacity: 0; /* Add this line */
+    opacity: 0;
+    /* Add this line */
+  }
+}
+button {
+  background-color: #171616;
+  color: #edebe4;
+  border: 1px solid transparent;
+  text-align: center;
+  justify-content: center;
+  align-content: center;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color 0.25s, border-width 0.03s, margin 0.03s, background-color 0.25s, background-image 0.25s, color 0.25s;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
   }
 }
 #nav1 {
@@ -128,7 +151,6 @@ body {
   background-color: #edebe4;
   color: white;
   text-shadow: 0px 0px 10px white;
-  font-weight: bolder;
   position: absolute;
   width: 20.5%;
   z-index: 2;
@@ -152,7 +174,9 @@ body {
   display: block;
   font-weight: bold;
   text-align: center;
-  padding-top: 14px;
+  align-items: center;
+  justify-content: center;
+  padding-top: 15px;
   padding-bottom: 14px;
   border-right: 0.5px solid black;
   border-left: 0.5px solid black;
@@ -175,7 +199,6 @@ body {
 .textbox {
   margin: 40px 0px 0px 0px;
   background-color: #faf9f6;
-  /* used to be white also #edebe4*/
   min-height: 100%;
   flex-wrap: wrap;
   display: flex;
@@ -225,7 +248,7 @@ body {
   border-bottom: 1px solid black;
   margin: 0px 1px 5px 1px;
   padding: 0px 5px 5px 40px;
-  min-height: 120vh;
+  min-height: 100vh;
 }
 
 /* container for todo List + button and input */
@@ -406,7 +429,11 @@ body {
   font-size: 16px;
   width: 50%;
 }
-.playPauseButton:hover, .playPauseButton:active, .playPauseButton:focus {
+.playPauseButton:hover {
+  background-color: #1a1a1a;
+  color: #edebe4;
+}
+.playPauseButton:active {
   background-color: #1a1a1a;
   color: #edebe4;
 }
@@ -496,31 +523,6 @@ body {
   box-shadow: -407px 3px 3px 400px #646cff;
 }
 
-/*=========== PRESET STYLES===============*/
-button {
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s, background-color 0.25s, color 0.25s, color 0.25s;
-}
-button:hover {
-  border: 2px solid #646cff;
-}
-button:focus,
-button active {
-  border: 2px solid #646cff;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-}
 #projects-container {
   display: flex;
   flex-direction: row;
@@ -528,6 +530,161 @@ button active {
   align-items: flex-start;
   padding-top: 40px;
   padding-right: 40px;
+}
+
+#blogTitle {
+  margin-bottom: 40px;
+}
+
+#blogList {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #faf9f6;
+  border: 1px solid black;
+  padding: 20px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  margin-right: 30px;
+}
+#blogList .text {
+  margin-top: 10px;
+}
+#blogList .title {
+  margin-bottom: 20px;
+  border-bottom: 1px solid black;
+  padding-bottom: 10px;
+  text-wrap: nowrap;
+  width: min-content;
+}
+#blogList .blogEntry {
+  opacity: 0;
+  transition: opacity 1s ease;
+  margin-top: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid black;
+  width: 100%;
+}
+#blogList .blogEntry:first-child {
+  margin-top: 20px;
+}
+#blogList .blogEntry:last-child {
+  padding-bottom: 10px;
+  border-bottom: none;
+}
+
+#newPost {
+  max-height: 0;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #faf9f6;
+  border: 1px solid black;
+  padding: 20px;
+  padding-bottom: 0px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  margin-right: 30px;
+}
+#newPost .inputSpan {
+  cursor: text;
+}
+#newPost .inputSpan:empty::before {
+  content: attr(data-placeholder);
+  color: gray;
+}
+#newPost .inputSpan:focus::before {
+  content: none;
+  caret-color: black;
+  caret: auto;
+}
+#newPost #bigTitleDiv {
+  width: 50%;
+  overflow: hidden;
+  cursor: text;
+}
+#newPost .titleContainer {
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  width: min-content;
+  border-bottom: 1px solid black;
+  transition: all 0.25s;
+}
+#newPost .titleContainer #title {
+  transition: all 0.25s;
+  padding: 5px;
+  box-sizing: border-box;
+  border: 0px solid black;
+  text-wrap: nowrap;
+  height: 48px;
+  background-color: #faf9f6;
+  font-size: 20px;
+  font-weight: bold;
+}
+#newPost .titleContainer #title:focus {
+  outline: none;
+  background-color: #edebe4;
+}
+#newPost .textContainer {
+  width: 100%;
+  height: 300px;
+  margin-bottom: 20px;
+}
+#newPost .textContainer .text {
+  transition: background-color 0.25s;
+  background-color: #faf9f6;
+  border: 0px solid black;
+  margin-top: 10px;
+  width: 100%;
+  height: 100%;
+  resize: none;
+  padding: 5px;
+  font-size: 16px;
+}
+#newPost .textContainer .text:focus {
+  outline: none;
+  background-color: #edebe4;
+}
+#newPost #newPostSubmit {
+  margin-left: -20px;
+  width: calc(0.2 * (100% + 60px));
+  height: 48px;
+  border-radius: 0px;
+  background-color: black;
+  color: #edebe4;
+  border: 1px solid black;
+  border-left: none;
+  border-bottom: none;
+}
+#newPost #newPostSubmit:hover {
+  background-color: #edebe4;
+  cursor: pointer;
+  color: black;
+}
+#newPost #newPostSubmit:active {
+  background-image: linear-gradient(30deg, skyblue, lightcoral);
+  color: white;
+  text-shadow: 0px 0px 10px white;
+}
+
+#newPostButton {
+  width: 20%;
+  height: 48px;
+  border-radius: 0px;
+  background-color: black;
+  color: #edebe4;
+  border: 1px solid black;
+}
+#newPostButton:hover {
+  background-color: #edebe4;
+  cursor: pointer;
+  color: black;
+}
+#newPostButton:active {
+  background-image: linear-gradient(30deg, skyblue, lightcoral);
+  color: white;
+  text-shadow: 0px 0px 10px white;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,11 +1,10 @@
-$mainBlack: #171616;
-$secondBlack: #1a1a1a;
-$thirdBlack: #333;
-$offWhite: #edebe4;
+@import "variables";
+
 #music {
     width: 50%;
     text-align: center;
 }
+
 .card {
     padding: 2em;
 }
@@ -62,9 +61,14 @@ $offWhite: #edebe4;
     text-decoration: none;
     font-size: 16px;
     width: 50%;
-    &:hover,
-    &:active,
-    &:focus {
+
+    &:hover {
+        background-color: $secondBlack;
+        color: $offWhite;
+    }
+
+    &:active {
+
         background-color: $secondBlack;
         color: $offWhite;
     }
@@ -91,8 +95,9 @@ $offWhite: #edebe4;
     font-style: normal;
     cursor: pointer;
     transition: color 0.25s;
+
     &:hover {
-        color: #646cff;
+        color: $primary;
     }
 }
 
@@ -104,6 +109,7 @@ $offWhite: #edebe4;
     width: 80px;
     margin-bottom: 40px;
 }
+
 .bottom {
     width: 100%s;
 }
@@ -137,11 +143,13 @@ $offWhite: #edebe4;
     /*  slider progress trick  */
     overflow: hidden;
     background-clip: content-box;
+
     &::-webkit-slider-runnable-track {
         height: 3px;
         background: black;
         overflow: hidden;
     }
+
     &::-webkit-slider-thumb {
         /* removing default appearance */
         -webkit-appearance: none;
@@ -149,36 +157,8 @@ $offWhite: #edebe4;
         /* creating a custom design */
         height: 10px;
         width: 20px;
-        background-color: #646cff;
+        background-color: $primary;
         /*  slider progress trick  */
-        box-shadow: -407px 3px 3px 400px #646cff;
-    }
-}
-
-/*=========== PRESET STYLES===============*/
-
-button {
-    border: 1px solid transparent;
-    padding: 0.6em 1.2em;
-    font-size: 1em;
-    font-weight: 500;
-    font-family: inherit;
-    background-color: #1a1a1a;
-    cursor: pointer;
-    transition: border-color 0.25s, background-color 0.25s, color 0.25s,
-        color 0.25s;
-    &:hover {
-        border: 2px solid #646cff;
-    }
-    &:focus,
-    active {
-        border: 2px solid #646cff;
-    }
-}
-
-@media (prefers-color-scheme: light) {
-    :root {
-        color: #213547;
-        background-color: #ffffff;
+        box-shadow: -407px 3px 3px 400px $primary;
     }
 }

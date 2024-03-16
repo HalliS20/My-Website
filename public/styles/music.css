@@ -60,7 +60,11 @@
   font-size: 16px;
   width: 50%;
 }
-.playPauseButton:hover, .playPauseButton:active, .playPauseButton:focus {
+.playPauseButton:hover {
+  background-color: #1a1a1a;
+  color: #edebe4;
+}
+.playPauseButton:active {
   background-color: #1a1a1a;
   color: #edebe4;
 }
@@ -148,32 +152,6 @@
   background-color: #646cff;
   /*  slider progress trick  */
   box-shadow: -407px 3px 3px 400px #646cff;
-}
-
-/*=========== PRESET STYLES===============*/
-button {
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s, background-color 0.25s, color 0.25s, color 0.25s;
-}
-button:hover {
-  border: 2px solid #646cff;
-}
-button:focus,
-button active {
-  border: 2px solid #646cff;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
 }
 
 /*# sourceMappingURL=music.css.map */
