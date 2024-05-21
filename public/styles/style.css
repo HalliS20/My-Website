@@ -244,10 +244,11 @@ button {
   padding: 40px 40px 0px 0px;
 }
 
-.imgdiv {
+.imgDiv {
   padding-left: 5px;
   border-left: 1px solid black;
-  max-width: 60%;
+  width: 40%;
+  max-height: calc(100vh - 48px);
 }
 
 .half {
@@ -256,15 +257,23 @@ button {
 
 #coverDiv {
   position: relative;
+  width: 100%;
+  height: 100%;
 }
 
 .sidelines {
   border-left: 1px solid black;
   border-right: 1px solid black;
   border-bottom: 1px solid black;
-  margin: 0px 1px 5px 1px;
-  padding: 0px 5px 5px 40px;
+  margin: 0 1px 5px 1px;
+  padding: 0 5px 5px 40px;
   min-height: 100vh;
+}
+
+img#imgPart {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 
 .arrow {

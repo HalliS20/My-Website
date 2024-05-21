@@ -11,22 +11,36 @@ async function fetchPictures() {
     return fullPaths
 }
 
+function setFirstPicture(allPics) {
+    let parent = document.getElementById("coverDiv")
+    let imgPart = document.createElement("img")
+    imgPart.src = allPics[0]
+    imgPart.id = "imgPart"
+    parent.prepend(imgPart)
+}
+
+
+function setImage(imgObj, index, allPics) {
+    imgObj.src = allPics[index]
+}
+
 export async function pictures() {
+    //============= Initializations =============//
     let index = 0
     const allPics = await fetchPictures()
+    setFirstPicture(allPics)
     let imgPart = document.getElementById("imgPart")
-    imgPart.src = allPics[index]
-    console.log(allPics)
+    //============= Event Listeners =============//
     document.getElementById("nextPic").addEventListener("click", function () {
         if (index < allPics.length - 1) {
             index++
-            imgPart.src = allPics[index]
+            setImage(imgPart, index, allPics)
         }
     })
     document.getElementById("prevPic").addEventListener("click", function () {
         if (index > 0) {
             index--
-            imgPart.src = allPics[index]
+            setImage(imgPart, index, allPics)
         }
     })
 }
