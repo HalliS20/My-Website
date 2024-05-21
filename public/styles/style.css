@@ -248,7 +248,7 @@ button {
   padding-left: 5px;
   border-left: 1px solid black;
   width: 40%;
-  max-height: 100%;
+  height: calc(100vh - 48px);
 }
 
 .half {
@@ -284,7 +284,7 @@ img#imgPart {
   width: 20px;
 }
 .arrow img {
-  border: 0px solid black;
+  border: 0 solid black;
   filter: invert(100%);
   opacity: 0.5;
   transition: opacity 0.3s;
