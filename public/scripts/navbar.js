@@ -51,5 +51,7 @@ function addEventListeners() {
         })
 
     const firstNavLink = document.querySelector(".navbar li:first-child a")
-    window.loadPage("../views/home.html", firstNavLink)
+    window.loadPage("../views/home.html", firstNavLink).then(() => {
+        window.pictures()
+    })
 }
