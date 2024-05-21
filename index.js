@@ -38,6 +38,15 @@ async function getAllDocuments() {
     return result
 }
 
+async function insertDocument(document) {
+    const client = await startClient()
+    const database = client.db("blog")
+
+    const result = await database.collection("entries").insertOne(document)
+    client.close()
+    return result
+}
+
 app.get("/", (request, response) => {
     response.send("Hi there")
 })
@@ -49,8 +58,21 @@ app.get("/blog", (request, response) => {
     })
 })
 
+app.post("/blog", (request, response) => {
+    console.log(request.body)
+    insertDocument(request.body).then((result) => {
+        response.send(result)
+        console.log(result)
+    })
+})
+
 app.get("/audio", (request, response) => {
     const files = fs.readdirSync("./public/music/")
+    response.send(files)
+})
+
+app.get("/pictures", (request, response) => {
+    const files = fs.readdirSync("./public/pictures/me/")
     response.send(files)
 })
 

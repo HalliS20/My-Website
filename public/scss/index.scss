@@ -48,6 +48,10 @@
     flex: 1;
 }
 
+#coverDiv {
+    position: relative;
+}
+
 .sidelines {
     border-left: 1px solid black;
     border-right: 1px solid black;
@@ -55,4 +59,35 @@
     margin: 0px 1px 5px 1px;
     padding: 0px 5px 5px 40px;
     min-height: 100vh;
+}
+
+#imgPart {}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    width: 20px;
+
+    img {
+        border: 0px solid black;
+        filter: invert(100%);
+        opacity: 0.5;
+        transition: opacity 0.3s;
+    }
+}
+
+.arrow:hover {
+    img {
+        opacity: 1;
+        cursor: pointer;
+    }
+}
+
+.rightArrow {
+    right: 10px;
+
+}
+
+.leftArrow {
+    left: 10px;
 }

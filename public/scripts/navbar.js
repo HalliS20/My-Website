@@ -13,7 +13,9 @@ function addEventListeners() {
         .getElementById("homeLink")
         .addEventListener("click", function (event) {
             event.preventDefault() // Prevent the default link behavior
-            window.loadPage("../views/home.html", this)
+            window.loadPage("../views/home.html", this).then(() => {
+                window.pictures()
+            })
         })
 
     document
