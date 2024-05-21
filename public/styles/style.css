@@ -624,6 +624,16 @@ img#imgPart {
   padding-bottom: 10px;
   border-bottom: none;
 }
+#blogList .titlePart {
+  display: flex;
+  flex-direction: row;
+  align-items: top;
+  justify-content: space-between;
+}
+#blogList .date {
+  font-size: 12px;
+  color: gray;
+}
 
 #newPost {
   max-height: 0;

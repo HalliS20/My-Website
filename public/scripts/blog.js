@@ -1,20 +1,31 @@
 function createBlogEntry(content, entry) {
     const entryDiv = document.createElement("div")
     entryDiv.classList.add("blogEntry")
+    const titlePart = document.createElement("div")
+    titlePart.classList.add("titlePart")
+
     const title = document.createElement("h2")
     title.innerText = entry.title
     title.classList.add("title")
+
+    const date = document.createElement("p")
+    date.innerText = entry.date
+    date.classList.add("date")
+
+    titlePart.appendChild(title)
+    titlePart.appendChild(date)
+
     const text = document.createElement("p")
     text.innerText = entry.text
     text.classList.add("text")
 
-    entryDiv.appendChild(title)
+    entryDiv.appendChild(titlePart)
     entryDiv.appendChild(text)
 
     const currentHeight = content.clientHeight
     console.log(currentHeight)
     // Append the new entry
-    content.appendChild(entryDiv)
+    content.prepend(entryDiv)
 
     // Use requestAnimationFrame to ensure the new height is calculated after the new entry is added
     requestAnimationFrame(() => {
@@ -95,7 +106,7 @@ function watchSubmit() {
     document.getElementById("newPostSubmit").addEventListener("click", () => {
         const title = document.getElementById("title").innerText
         const text = document.getElementById("text").value
-        const entry = {title: title, text: text}
+        const entry = {title: title, text: text, date: getDate()}
         fetch("/blog", {
             method: "POST",
             headers: {
@@ -128,6 +139,17 @@ function fadeOut(element) {
         requestAnimationFrame(decrease)
     }
     decrease()
+}
+
+function getDate() {
+    let date = new Date()
+
+    let day = String(date.getDate()).padStart(2, "0")
+    let month = String(date.getMonth() + 1).padStart(2, "0") // Months are 0-based in JavaScript
+    let year = String(date.getFullYear()).slice(-2) // Get last two digits of year
+
+    let formattedDate = `${day}.${month}.${year}`
+    return formattedDate
 }
 
 export async function blog() {
