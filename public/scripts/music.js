@@ -1,46 +1,21 @@
-// import {readdir} from "fs"
-
 // ========= play audio function ================
 
-function playAudio(audio, playPauseButton) {
-    audio.play()
-    playPauseButton.innerText = "Pause"
-
-    //========== change event listener to pause audio
-    playPauseButton.removeEventListener("click", playAudio)
-    playPauseButton.addEventListener("click", () =>
-        pauseAudio(audio, playPauseButton),
-    )
-}
-
-// ========= pause audio function ================
-function pauseAudio(audio, playPauseButton) {
-    audio.pause()
-    playPauseButton.innerText = "Play"
-
-    //========= change event listener to play audio
-    playPauseButton.removeEventListener("click", pauseAudio)
-    playPauseButton.addEventListener("click", () =>
-        playAudio(audio, playPauseButton),
-    )
+function togglePlayPause(audio, playPauseButton) {
+    if (audio.paused) {
+        audio.play();
+        playPauseButton.innerText = "Pause";
+    } else {
+        audio.pause();
+        playPauseButton.innerText = "Play";
+    }
 }
 
 async function fetchAudio() {
-    const songNames = [
-        "Alltaf_SOlO",
-        "Beuty",
-        "Erik",
-        "Flowers",
-        "Midnight",
-        "Plastic",
-        "Stars",
-        "voices",
-    ]
-    const suffix = ".mp3"
+    const songNames = await fetch("/audio").then((response) => response.json())
     const prefix = "../music/"
     let fullPaths = []
     for (let i in songNames) {
-        const path = prefix + songNames[i] + suffix
+        const path = prefix + songNames[i]
         fullPaths.push(path)
     }
     return fullPaths
@@ -53,7 +28,7 @@ function createPlayBarElement(audio) {
     playPauseButton.classList.add("playPauseButton")
     playPauseButton.innerText = "Play"
     playPauseButton.addEventListener("click", () =>
-        playAudio(audio, playPauseButton),
+        togglePlayPause(audio, playPauseButton),
     )
     playBar.classList.add("playBar")
     playBar.appendChild(playPauseButton)
