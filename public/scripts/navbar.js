@@ -14,7 +14,7 @@ function addEventListeners() {
         .addEventListener("click", function (event) {
             event.preventDefault() // Prevent the default link behavior
             window.loadPage("../views/home.html", this).then(() => {
-                window.pictures()
+                new window.pictures()
             })
         })
 
@@ -52,6 +52,6 @@ function addEventListeners() {
 
     const firstNavLink = document.querySelector(".navbar li:first-child a")
     window.loadPage("../views/home.html", firstNavLink).then(() => {
-        window.pictures()
+        new window.pictures()
     })
 }

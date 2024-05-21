@@ -1,5 +1,5 @@
 #nav1 {
-  position: absolute;
+  position: fixed;
   border-bottom: 1px solid black;
   flex-basis: 100%;
   width: 100%;
