@@ -16,6 +16,7 @@
 
 .splitrow {
   width: 100%;
+  max-width: 100vw;
   display: flex;
   flex-direction: row;
   justify-content: center;
