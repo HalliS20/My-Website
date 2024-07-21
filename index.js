@@ -14,8 +14,11 @@ app.use(express.json())
 //===============================MONGODB=======================================//
 
 async function startClient() {
+    // for posting on the server user is:
+    // hallist
+    // MainMan28
     const uri =
-        "mongodb+srv://hallist:B0VpnKzXbVONBz7M@cluster0.lgzcdji.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+        "mongodb+srv://readonly:reading@cluster0.lgzcdji.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
     // Create a MongoClient with a MongoClientOptions object to set the Stable API version
     const client = new MongoClient(uri, {
         serverApi: {
@@ -72,11 +75,16 @@ app.get("/audio", (request, response) => {
 })
 
 app.get("/pictures", (request, response) => {
-    const files = fs.readdirSync("./public/pictures/me/")
-    response.send(files)
+    try {
+        const files = fs.readdirSync("./public/pictures/me/")
+        response.send(files)
+    } catch (error) {
+        console.error("Error reading directory:", error)
+        response.status(500).send("Error reading directory")
+    }
 })
 
-const port = process.env.PORT || 3000
+const port = process.env.PORT || 3030
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`)
 })

@@ -21,7 +21,6 @@
   border-bottom: 1px solid black;
   padding-bottom: 10px;
   text-wrap: nowrap;
-  width: min-content;
 }
 #blogList .blogEntry {
   opacity: 0;
@@ -84,6 +83,8 @@
   margin-bottom: 20px;
   padding-bottom: 10px;
   width: min-content;
+  text-wrap: nowrap;
+  white-space: nowrap;
   border-bottom: 1px solid black;
   transition: all 0.25s;
 }

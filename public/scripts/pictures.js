@@ -1,9 +1,4 @@
-
-
-
-
-export class pictures{
-
+export class pictures {
     constructor() {
         this.allPics = []
         this.index = 0
@@ -14,13 +9,13 @@ export class pictures{
         })
     }
 
-    async init(){
+    async init() {
         this.allPics = await this.fetchPictures()
         this.setFirstPicture()
         this.setListeners()
     }
 
-    setListeners(){
+    setListeners() {
         document.getElementById("nextPic").addEventListener("click", () => {
             if (this.index < this.allPics.length - 1) {
                 this.setImage(1)
@@ -35,7 +30,7 @@ export class pictures{
 
     async fetchPictures() {
         const picturePaths = await fetch("/pictures").then((response) =>
-        response.json(),
+            response.json(),
         )
         const prefix = "../pictures/me/"
         let fullPaths = []
@@ -45,8 +40,6 @@ export class pictures{
         }
         return fullPaths
     }
-    
-
 
     setFirstPicture() {
         let imgPart = document.createElement("img")
@@ -56,34 +49,36 @@ export class pictures{
         this.parent.prepend(this.img)
     }
 
-    setTemp(dir){
+    setTemp(dir) {
         let tempImg = document.createElement("img")
+        console.log(this.allPics[this.index])
         tempImg.src = this.allPics[this.index]
         tempImg.id = "imgPart"
-        tempImg.style.opacity = '0'
-        tempImg.display = 'none'
-        tempImg.style.transform = `translateX(${-dir *100}%)`
+        tempImg.style.opacity = "0"
+        tempImg.display = "none"
+        tempImg.style.transform = `translateX(${-dir * 100}%)`
         return tempImg
     }
 
     setImage(dir) {
         this.index += dir
-        this.img.style.opacity = '0'; // Start the fade out
+        this.img.style.opacity = "0" // Start the fade out
         this.img.style.transform = `translateX(${dir * 100}%)`
         let tempImg = this.setTemp(dir)
 
         setTimeout(() => {
             this.parent.removeChild(this.img)
             this.parent.prepend(tempImg)
-        },200)
+        }, 200)
 
         setTimeout(() => {
-            tempImg.display = 'block'
-            tempImg.style.opacity = '1'
+            tempImg.display = "block"
+            tempImg.style.opacity = "1"
             tempImg.style.transform = `translateX(0%)`
         }, 300)
 
         setTimeout(() => {
-            this.img = tempImg},300)
+            this.img = tempImg
+        }, 300)
     }
 }
