@@ -10,13 +10,9 @@ app.use(express.static("public"))
 app.use(cors())
 app.use(express.json())
 
-// B0VpnKzXbVONBz7M
 //===============================MONGODB=======================================//
 
 async function startClient() {
-    // for posting on the server user is:
-    // hallist
-    // MainMan28
     const uri =
         "mongodb+srv://readonly:reading@cluster0.lgzcdji.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
     // Create a MongoClient with a MongoClientOptions object to set the Stable API version
